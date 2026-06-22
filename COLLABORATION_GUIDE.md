@@ -135,7 +135,46 @@ images/beecue/
 
 静态文件可以直接用浏览器打开，也可以用一个本地静态服务器预览。
 
-## 9. GitHub 协作流程
+## 9. Mac 开发注意事项
+
+这个网站可以直接在 macOS 上开发，不需要额外构建环境。协作时注意：
+
+- 路径统一使用 `/`，不要在代码或文档引用里写 Windows 本地路径，例如 `D:\...`。
+- 图片文件名大小写必须和 HTML/CSS 中的引用完全一致。GitHub Pages 对路径大小写敏感。
+- 不要提交 `.DS_Store`，该规则已写入 `.gitignore`。
+- 不要提交本地编辑器配置、系统缓存或同步软件临时文件。
+- 如果图片或视频从 Mac 替换，替换后检查文件扩展名是否一致，例如 `.png`、`.jpg`、`.mp4`。
+
+推荐本地预览方式：
+
+```bash
+python3 -m http.server 8000
+```
+
+然后访问：
+
+```text
+http://localhost:8000/
+```
+
+Bee Cue 页面可以访问：
+
+```text
+http://localhost:8000/project-five.html
+```
+
+Mac 上的 Git 流程和 Windows 一样：
+
+```bash
+git status
+git add <changed files>
+git commit -m "Describe the change"
+git push
+```
+
+如果第一次 push 需要登录 GitHub，可以使用 GitHub Desktop、GitHub CLI 或浏览器弹出的 Git Credential Manager 完成授权。
+
+## 10. GitHub 协作流程
 
 推荐流程：
 
@@ -154,7 +193,7 @@ git push
 - 图片路径大小写与 HTML 中引用一致
 - `project-five.html` 能在 GitHub Pages 路径下正常打开
 
-## 10. GitHub Pages
+## 11. GitHub Pages
 
 当前 Pages 入口：
 
@@ -170,7 +209,7 @@ https://neeeveee.github.io/jiangnan-yin-portfolio/project-five.html
 
 如果页面 404 或显示旧内容，通常等待 1-3 分钟后刷新即可。若仍不更新，检查 GitHub 仓库的 Actions / Pages deployment 状态。
 
-## 11. 协作注意事项
+## 12. 协作注意事项
 
 - 修改前先确认目标：是改内容、改排版、替换图片，还是同步 Figma。
 - 对 Bee Cue 这种 Figma 对齐页面，不要凭感觉重做。
