@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bee Cue | Yin Jiangnan</title>
+  <meta
+    name="description"
+    content="Bee Cue is a predictive support system for beekeeping under phenological mismatch, presented as a portfolio case study by Yin Jiangnan."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="landing-dark detail-page-dark bee-cue-page">
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="site-nav bee-cue-site-nav" data-site-nav>
+    <a class="site-nav-brand" href="index.html" aria-label="Yin Jiangnan home">
+      <span>Yin Jiangnan</span>
+      <span>/ Nevena</span>
+    </a>
+    <nav class="floating-nav bee-cue-main-nav" aria-label="Primary navigation">
+      <a href="index.html">Index</a>
+      <a href="index.html#works">Works</a>
+      <a href="#overview">Info</a>
+      <a href="#film">Film</a>
+      <a href="#contact">Contact</a>
+      <a href="https://bee-scenario-ai.onrender.com/index.html" target="_blank" rel="noopener">Live</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bee-cue-hero reveal" id="top" aria-labelledby="bee-cue-title">
+      <div class="bee-cue-hero-copy">
+        <p class="eyebrow">Website System / Predictive Support</p>
+        <h1 id="bee-cue-title">Bee Cue</h1>
+        <h2>A Predictive Support System for Beekeeping under Phenological Mismatch</h2>
+        <p>
+          A web-based system that translates weather, flowering and bee activity data into readable decision support for beekeeping practice.
+        </p>
+        <div class="bee-cue-actions">
+          <a href="https://bee-scenario-ai.onrender.com/index.html" target="_blank" rel="noopener">Open Live Website</a>
+          <a href="#design">View Prototype</a>
+          <a href="#film">Watch Project Film</a>
+        </div>
+        <div class="detail-pills bee-cue-tags" aria-label="Project tags">
+          <em>Website System</em>
+          <em>Data Visualization</em>
+          <em>Interaction Design</em>
+          <em>Predictive Support</em>
+          <em>Ecological Design</em>
+          <em>Machine Learning</em>
+        </div>
+      </div>
+      <figure class="bee-cue-hero-media">
+        <img src="images/beecue/Image (Bee Cue website interface showing a map-based ecological prediction system).png" alt="Bee Cue website interface showing a map-based ecological prediction system">
+      </figure>
+    </section>
+
+    <nav class="bee-cue-anchor-nav reveal" aria-label="Case study navigation">
+      <a href="#overview">Overview</a>
+      <a href="#design">Prototype</a>
+      <a href="#demo">Demo</a>
+      <a href="#challenge">Challenge</a>
+      <a href="#research">Research</a>
+      <a href="#goal">Decisions</a>
+      <a href="#logic">Logic</a>
+      <a href="#film">Film</a>
+      <a href="#reflection">Reflection</a>
+    </nav>
+
+    <section class="detail-intro-grid reveal" id="overview">
+      <div class="detail-intro-label">Project Overview</div>
+      <div class="detail-intro-main">
+        <p>
+          Bee Cue is a graduation design project that explores how ecological prediction can be translated into a readable and interactive website system for beekeeping practice.
+        </p>
+        <div class="bee-cue-overview-grid">
+          <div>
+            <span>Project Type</span>
+            <p>Graduation Design / Interactive Website / Data Visualization System</p>
+          </div>
+          <div>
+            <span>My Role</span>
+            <p>Research, System Design, UI/UX Design, Data Visualization, Front-end Prototype, Video Direction</p>
+          </div>
+          <div>
+            <span>Duration</span>
+            <p>2025 - 2026</p>
+          </div>
+          <div>
+            <span>Deliverables</span>
+            <p>Working Website / Data Dashboard / Prediction Logic / Project Film / Research Report</p>
+          </div>
+          <div>
+            <span>Tools &amp; Methods</span>
+            <p>HTML, CSS, JavaScript, Weather API, Sensor Data, Rule-based Models, Machine Learning Correction</p>
+          </div>
+          <div>
+            <span>Context</span>
+            <p>China Academy of Art, Art &amp; Technology Graduation Project</p>
+          </div>
+        </div>
+        <div class="case-study-note bee-cue-wide-note">
+          <strong>Project Boundary</strong>
+          <p>Bee Cue is not designed to replace beekeepers' decisions. It provides readable, traceable and comparable information to support judgment under ecological uncertainty.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study-section reveal" id="challenge">
+      <div class="case-study-label">Design Challenge</div>
+      <div class="case-study-body bee-cue-section-body bee-cue-section-body-plain">
+        <div class="case-study-copy">
+          <h2>Ecological timing is becoming harder to read.</h2>
+          <p>
+            Climate change is disrupting the timing between plant flowering and bee activity. For beekeeping practice, this makes it harder to judge nectar availability, bee activity and environmental risks through experience alone.
+          </p>
+        </div>
+      </div>
+      <div class="bee-cue-challenge-grid">
+        <article>
+          <img src="images/beecue/challenge-01.png" alt="Illustration showing climate change affecting flowering and bee activity timing">
+          <span>01</span>
+          <strong>Climate Change Is Worsening</strong>
+          <p>Fluctuations in temperature, precipitation, and extreme weather are making ecological rhythms even more unstable.</p>
+        </article>
+        <article>
+          <img src="images/beecue/challenge-02.png" alt="Illustration showing irregular nectar flow patterns in beekeeping practice">
+          <span>02</span>
+          <strong>Irregular Nectar Flow Patterns</strong>
+          <p>When the flowering season begins earlier, is delayed, or is shortened, it becomes difficult to predict the optimal window for nectar collection.</p>
+        </article>
+        <article>
+          <img src="images/beecue/challenge-03.png" alt="Illustration showing beekeepers making decisions on site">
+          <span>03</span>
+          <strong>Difficulty in Making Decisions on-Site</strong>
+          <p>The interplay of weather, flowering periods, and the condition of the bee colonies increases the difficulty for beekeepers in making decisions.</p>
+        </article>
+        <article>
+          <img src="images/beecue/challenge-04.png" alt="Illustration showing fragmented ecological and beekeeping information">
+          <span>04</span>
+          <strong>Fragmented Information</strong>
+          <p>Information from multiple sources lacks a unified structure, making it difficult to directly translate into practical judgments.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-study-section reveal" id="research">
+      <div class="case-study-label">Research</div>
+      <div class="case-study-body bee-cue-section-body bee-cue-section-body-plain">
+        <div class="case-study-copy">
+          <h2>Understanding the ecological and beekeeping context</h2>
+          <p>
+            The research connected ecological literature, field context and data structure so the system could be grounded in real beekeeping conditions.
+          </p>
+        </div>
+      </div>
+      <div class="bee-cue-research-board">
+        <article class="bee-cue-research-card bee-cue-research-card-literature">
+          <div class="bee-cue-research-copy">
+            <span>01 Literature Review</span>
+            <p>The research began with phenological mismatch, pollination, climate change and agricultural decision support systems.</p>
+            <small>Source: China Meteorological Administration, Climate Change Blue Book</small>
+          </div>
+          <div class="bee-cue-research-media bee-cue-research-media-literature">
+            <img src="images/beecue/01 Literature Review01.png" alt="Climate change and beekeeping research chart">
+            <img src="images/beecue/01 Literature Review02.png" alt="Flowering and bee activity curve diagram">
+          </div>
+        </article>
+        <article class="bee-cue-research-card bee-cue-research-card-field">
+          <div class="bee-cue-research-copy">
+            <span>02 Field Context</span>
+            <p>Field observation focused on the beekeeping site, nectar plant distribution, seasonal changes and local environmental conditions.</p>
+          </div>
+          <div class="bee-cue-research-media bee-cue-research-media-field">
+            <img src="images/beecue/02 Field Context03.png" alt="Beehive field context and nectar plant environment">
+            <img src="images/beecue/02 Field Context02.png" alt="Beekeeping equipment and field observation">
+            <img src="images/beecue/02 Field Context01.png" alt="Rows of beehive boxes in the field">
+          </div>
+        </article>
+        <article class="bee-cue-research-card bee-cue-research-card-data">
+          <div class="bee-cue-research-copy">
+            <span>03 Data Sources</span>
+            <p>The system was built around three main types of information: weather data, flowering data and bee activity data.</p>
+          </div>
+          <div class="bee-cue-research-media bee-cue-research-media-data">
+            <img src="images/beecue/03 Data Sources01.png" alt="Weather and environmental data source table">
+            <img src="images/beecue/03 Data Sources02.png" alt="Bee activity and environmental data relationship diagram">
+            <img src="images/beecue/03 Data Sources03.png" alt="Sensor and bee activity data sketch">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-study-section reveal" id="insight">
+      <div class="case-study-label">Key Insight</div>
+      <div class="case-study-body bee-cue-section-body bee-cue-section-body-plain">
+        <div class="case-study-copy">
+          <h2>From scattered signals to practical judgment</h2>
+          <p>
+            The problem is not only a lack of data, but the difficulty of translating scattered ecological signals into practical judgment.
+          </p>
+        </div>
+      </div>
+      <div class="bee-cue-three-grid">
+        <article>
+          <span>01</span>
+          <strong>Beekeepers Need Comparison, Not Isolated Data</strong>
+          <p>Weather, flowering and bee activity need to be viewed together rather than as separate pieces of information.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <strong>Prediction Should Show Uncertainty, Not a Single Answer</strong>
+          <p>Ecological change is uncertain, so the system should show ranges, trends and possible scenarios instead of one fixed result.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <strong>The System Should Support Experience, Not Replace It</strong>
+          <p>Bee Cue provides decision support while leaving final judgment to beekeepers and field practitioners.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-study-section reveal" id="goal">
+      <div class="case-study-label">Design Decisions</div>
+      <div class="case-study-body bee-cue-section-body bee-cue-section-body-plain">
+        <div class="case-study-copy">
+          <h2>Make ecological change visible, comparable and traceable.</h2>
+          <p>
+            The goal is to design a web-based predictive support system that helps beekeeping practice read ecological change without turning prediction into a single command.
+          </p>
+        </div>
+      </div>
+      <div class="bee-cue-goal-visual-grid">
+        <article>
+          <img src="images/beecue/Design Goal01.png" alt="Icon showing ecological data visibility through map and chart layers">
+          <strong>Make Ecological Data Visible</strong>
+        </article>
+        <article>
+          <img src="images/beecue/Design Goal02.png" alt="Icon showing prediction made understandable through readable signals">
+          <strong>Make Prediction Understandable</strong>
+        </article>
+        <article>
+          <img src="images/beecue/Design Goal03.png" alt="Icon showing non-instructive decision support options">
+          <strong>Make Decision Support Non-instructive</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-study-section reveal" id="logic">
+      <div class="case-study-label">System Logic</div>
+      <div class="case-study-body bee-cue-section-body">
+        <div class="case-study-copy">
+          <h2>From Data to Decision Support</h2>
+          <p>
+            Bee Cue combines rule-based ecological models with a machine learning correction layer. Rule-based models translate ecological relationships into readable indexes, while machine learning is used to reduce part of the gap between predicted and observed bee activity.
+          </p>
+        </div>
+        <div class="case-study-rail">
+          <div class="case-study-note">
+            <strong>Machine Learning Boundary</strong>
+            <p>Machine learning is used as a correction layer, not as a black-box replacement or automatic decision-making engine.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bee-cue-flow bee-cue-flow-icons" aria-label="Bee Cue prediction logic flow">
+        <div><img class="bee-cue-flow-icon" src="images/beecue/Cloudy (多云).png" alt="" aria-hidden="true"><span>Weather<br>Data</span></div>
+        <div><img class="bee-cue-flow-icon" src="images/beecue/Blossom (花).png" alt="" aria-hidden="true"><span>Flowering<br>Data</span></div>
+        <div><img class="bee-cue-flow-icon" src="images/beecue/Bee (蜜蜂).png" alt="" aria-hidden="true"><span>Bee Activity<br>Data</span></div>
+        <div><img class="bee-cue-flow-icon" src="images/beecue/Table-report (报表).png" alt="" aria-hidden="true"><span>Rule-based Ecological Models</span></div>
+        <div><img class="bee-cue-flow-icon" src="images/beecue/Check-one (校验).png" alt="" aria-hidden="true"><span>Machine Learning Correction</span></div>
+        <div><img class="bee-cue-flow-icon" src="images/beecue/Web-page (网页).png" alt="" aria-hidden="true"><span>Visual<br>Outputs</span></div>
+        <div><img class="bee-cue-flow-icon" src="images/beecue/Vertical-timeline (垂直时间线).png" alt="" aria-hidden="true"><span>Decision<br>Support</span></div>
+      </div>
+      <div class="detail-gallery-split bee-cue-logic-media bee-cue-logic-media-single">
+        <figure class="detail-asset-figure bee-cue-captioned-asset">
+          <img src="images/beecue/backtesting.png" alt="Machine learning correction backtesting interface comparing observed and predicted bee activity">
+          <figcaption>The backtesting view shows how historical bee activity data is used to compare observed activity, rule-based prediction and machine-learning-corrected results.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-study-section reveal" id="design">
+      <div class="case-study-label">Website Prototype</div>
+      <div class="case-study-body bee-cue-section-body">
+        <div class="case-study-copy">
+          <h2>Website Prototype</h2>
+          <p>
+            The final outcome is a working web prototype that visualizes bee activity, nectar source changes and mismatch risks through a site-based map interface, data dashboard and scenario support page.
+          </p>
+        </div>
+        <div class="case-study-rail bee-cue-live-rail">
+          <a class="case-study-link bee-cue-live-link" href="https://bee-scenario-ai.onrender.com/index.html" target="_blank" rel="noopener" aria-label="Open the Bee Cue live website">
+            Open Live Website
+            <span>Live prototype on Render</span>
+          </a>
+        </div>
+      </div>
+      <figure class="bee-cue-wide-visual">
+        <img src="images/beecue/Image (Bee Cue final website main interface).png" alt="Bee Cue final website main interface">
+      </figure>
+      <div class="bee-cue-screen-grid">
+        <article>
+          <img src="images/beecue/Image (Bee Cue website landing interface).png" alt="Bee Cue website landing interface">
+          <strong>Map Interface</strong>
+          <p>The entry view connects field location, weather, nectar sources and system status in one map-based workspace.</p>
+        </article>
+        <article>
+          <img src="images/beecue/Image (Bee Cue map-based ecological interface).png" alt="Bee Cue map-based ecological interface">
+          <strong>Environmental Layer</strong>
+          <p>This layer presents nectar plants, flowering periods and environmental conditions, showing how resource availability changes across time and space.</p>
+        </article>
+        <article>
+          <img src="images/beecue/Image (Bee Cue ecological index dashboard).png" alt="Bee Cue ecological index dashboard">
+          <strong>Behavior Layer</strong>
+          <p>Bee activity is translated into heatmaps, sensor records and activity curves, making behavioral changes visible and comparable.</p>
+        </article>
+        <article>
+          <img src="images/beecue/Image (Bee Cue scenario support page).png" alt="Bee Cue scenario support page">
+          <strong>Strategy Page</strong>
+          <p>Strategy cards organize possible responses based on the current ecological state, allowing users to compare references before taking action.</p>
+        </article>
+        <article>
+          <img src="images/beecue/Image (Bee Cue machine learning backend interface).png" alt="Bee Cue machine learning backend interface">
+          <strong>Strategy Detail Page</strong>
+          <p>Each strategy expands into detailed guidance, including conditions, operation steps, risk notes and an entry to AI-assisted conversation.</p>
+        </article>
+      </div>
+    </section>
+
+    <span class="bee-cue-anchor-target" id="features" aria-hidden="true"></span>
+
+    <section class="case-study-section reveal" id="demo">
+      <div class="case-study-label">Prototype Demo</div>
+      <div class="case-study-body bee-cue-section-body">
+        <div class="case-study-copy">
+          <h2>Working Web Prototype</h2>
+          <p>
+            The prototype demonstrates how users enter the system, view environmental layers, compare bee activity, read mismatch risk and explore scenario-based references.
+          </p>
+        </div>
+        <div class="case-study-rail">
+          <a class="case-study-link" href="https://youtu.be/p_7f3CDtsX8" target="_blank" rel="noopener" aria-label="Launch Bee Cue prototype demo on YouTube">
+            Launch Prototype
+            <span>https://youtu.be/p_7f3CDtsX8</span>
+          </a>
+        </div>
+      </div>
+      <figure class="bee-cue-video-shell">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/p_7f3CDtsX8"
+          title="Bee Cue working website prototype demo"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </figure>
+    </section>
+
+    <section class="case-study-section reveal" id="film">
+      <div class="case-study-label">Project Film</div>
+      <div class="case-study-body bee-cue-section-body">
+        <div class="case-study-copy">
+          <h2>A complete narrative supplement</h2>
+          <p>
+            A short film introducing the ecological background, system logic, interface design and application scenario of Bee Cue.
+          </p>
+        </div>
+      </div>
+      <figure class="bee-cue-video-shell bee-cue-film-shell">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/ko_BbQPov6A"
+          title="Bee Cue project film"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </figure>
+    </section>
+
+    <section class="case-study-section reveal" id="reflection">
+      <div class="case-study-label">Reflection</div>
+      <div class="bee-cue-reflection-grid">
+        <article>
+          <span>What I Learned</span>
+          <p>This project helped me explore how complex ecological data can be translated into an interactive system that is readable, traceable and useful for practical judgment.</p>
+        </article>
+        <article>
+          <span>Design Boundary</span>
+          <p>Bee Cue does not replace beekeepers' experience or provide a single correct answer. It supports users by making ecological changes more visible and comparable.</p>
+        </article>
+        <article>
+          <span>Next Step</span>
+          <p>Future development could include more long-term field data, more beekeeping sites, improved mobile experience and stronger user feedback mechanisms.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="detail-meta-board reveal" id="contact">
+      <div class="detail-meta-row">
+        <div class="detail-meta-label">Year</div>
+        <div class="detail-meta-value">2025 - 2026</div>
+      </div>
+      <div class="detail-meta-row">
+        <div class="detail-meta-label">Role</div>
+        <div class="detail-meta-value">Research, system design, UI/UX design, data visualization, front-end prototype, video direction</div>
+      </div>
+      <div class="detail-meta-row">
+        <div class="detail-meta-label">Tools</div>
+        <div class="detail-meta-value">HTML, CSS, JavaScript, weather API, sensor data, rule-based models, machine learning correction</div>
+      </div>
+      <div class="detail-meta-row">
+        <div class="detail-meta-label">Category</div>
+        <div class="detail-meta-value">Website System / Data Visualization / Predictive Support</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
