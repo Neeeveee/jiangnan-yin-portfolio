@@ -4,94 +4,390 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>From the Pet's Perspective | Yin Jiangnan</title>
+  <meta
+    name="description"
+    content="From the Pet's Perspective is an animal-centered veterinary clinic concept combining service design, spatial planning, information design and furniture design."
+  >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="landing-dark detail-page-dark">
+<body class="pets-page">
   <div class="progress-bar" aria-hidden="true"></div>
 
-  <header class="floating-nav detail-floating-nav">
-    <a href="index.html">Index</a>
-    <a href="#intro">Info</a>
-    <a href="index.html#works">Works</a>
-    <a href="#contact">Contact</a>
+  <header class="site-nav pets-site-nav" data-site-nav>
+    <a class="site-nav-brand" href="index.html" aria-label="Yin Jiangnan home">
+      <span>Yin Jiangnan</span>
+      <span>/ Nevena</span>
+    </a>
+    <nav class="floating-nav pets-main-nav" aria-label="Primary navigation">
+      <a href="index.html">Index</a>
+      <a href="index.html#works">Works</a>
+      <a href="#overview">Info</a>
+      <a href="#outcome">Outcome</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main>
-    <section class="detail-hero-banner reveal">
-      <img src="assets/images/project2-space-overview.png" alt="From the Pet's Perspective cover image">
-      <h1>FROM THE PET'S PERSPECTIVE</h1>
+    <section class="pets-hero reveal" id="top" aria-labelledby="pets-title">
+      <div class="pets-shell pets-hero__inner">
+        <header class="pets-hero__copy">
+          <p class="pets-eyebrow">Animal-Centered Service &amp; Spatial Design</p>
+          <h1 id="pets-title">From the Pet's Perspective</h1>
+          <h2>An empathetic veterinary clinic designed around how animals perceive care.</h2>
+          <p>
+            The project reframes veterinary care through pets' sensory and emotional experience, connecting low-stress spatial planning, clearer treatment feedback and pet-friendly waiting furniture.
+          </p>
+          <div class="pets-actions">
+            <a href="#outcome">View Final Outcome</a>
+            <a href="#process">Explore Design Process</a>
+          </div>
+          <div class="pets-tags" aria-label="Project tags">
+            <span>Animal-Centered Design</span>
+            <span>Service Design</span>
+            <span>Spatial Experience</span>
+            <span>Information Design</span>
+            <span>Furniture Design</span>
+          </div>
+        </header>
+        <figure class="pets-hero__media">
+          <img src="images/pets/pets-hero-clinic.jpg" alt="Illustrated exterior of the proposed animal-centered veterinary clinic">
+        </figure>
+      </div>
     </section>
 
-    <section class="detail-intro-grid reveal" id="intro">
-      <div class="detail-intro-label">Intro</div>
-      <div class="detail-intro-main">
-        <p>
-          This project rethinks veterinary care from the point of view of the animal. Instead of centering only human efficiency, it uses service design, spatial sequence, and atmosphere to create a calmer, more transparent pets healthcare experience.
-        </p>
-        <div class="detail-side-block">
-          <span>Deliverables:</span>
-          <div class="detail-side-list">
-            <div>Service Design</div>
-            <div>Spatial Design</div>
-            <div>Pets Healthcare</div>
-            <div>Furniture Design</div>
-            <div>3D Visualization</div>
+    <nav class="pets-anchor-nav pets-shell reveal" aria-label="Case study navigation">
+      <a href="#overview">Overview</a>
+      <a href="#outcome">Outcome</a>
+      <a href="#challenge">Challenge</a>
+      <a href="#strategy">Strategy</a>
+      <a href="#research">Research</a>
+      <a href="#process">Process</a>
+      <a href="#iteration">Iteration</a>
+      <a href="#reflection">Reflection</a>
+    </nav>
+
+    <section class="pets-overview reveal" id="overview">
+      <div class="pets-shell pets-overview__grid">
+        <header class="pets-section-label">Project Overview</header>
+        <div class="pets-overview__content">
+          <p class="pets-lead">
+            A veterinary clinic proposal that shifts the design focus from human convenience to the sensory, behavioral and emotional needs of pets.
+          </p>
+          <div class="pets-info-grid">
+            <div>
+              <span>Project Type</span>
+              <p>Academic Project / Animal-Centered Service &amp; Spatial Design</p>
+            </div>
+            <div>
+              <span>My Contribution</span>
+              <p>Research synthesis, service strategy, flow and spatial planning, interface concept, furniture design and 3D visualization</p>
+            </div>
+            <div>
+              <span>Duration</span>
+              <p>2025</p>
+            </div>
+            <div>
+              <span>Deliverables</span>
+              <p>Clinic system proposal, spatial model, waiting furniture, operating-room display and design report</p>
+            </div>
+            <div>
+              <span>Tools &amp; Methods</span>
+              <p>Blender, service blueprinting, spatial modeling, paper prototyping and rendering</p>
+            </div>
+            <div>
+              <span>Context</span>
+              <p>China Academy of Art, Art &amp; Technology Academic Project</p>
+            </div>
           </div>
-          <div class="detail-pills">
-            <em>Year / 2025</em>
-            <em>Project / From the Pet's Perspective</em>
-            <em>Type / Academic</em>
+          <div class="pets-boundary-note">
+            <strong>Project Scope</strong>
+            <p>This is a spatial and service design proposal developed through research, modeling and prototype iteration. It has not been built as a full-scale veterinary clinic.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="detail-gallery-grid reveal">
-      <figure><img src="assets/images/project2-space-overview.png" alt="Overall clinic render"></figure>
-      <figure><img src="assets/images/project2-space-f1.png" alt="Interior sequence"></figure>
-      <figure><img src="assets/images/project2-furniture-1.png" alt="Furniture render one"></figure>
-      <figure><img src="assets/images/project2-furniture-2.png" alt="Furniture render two"></figure>
+    <section class="pets-section reveal" id="outcome">
+      <div class="pets-shell">
+        <header class="pets-section__header">
+          <div class="pets-section-label">Final Outcome</div>
+          <div class="pets-section__intro">
+            <h2>A clinic system designed for lower stress and clearer care.</h2>
+            <p>
+              The final proposal combines separated circulation, visible treatment information and pet-specific waiting furniture into one coordinated care experience.
+            </p>
+          </div>
+        </header>
+
+        <figure class="pets-wide-media pets-wide-media--dark">
+          <img src="images/pets/pets-final-overview.jpg" alt="Overall 3D model of the animal-centered veterinary clinic">
+        </figure>
+
+        <div class="pets-outcome-grid">
+          <article>
+            <figure class="pets-media pets-media--contain pets-media--light">
+              <img src="images/pets/pets-floor-plan.png" alt="Clinic spatial model showing the internal floor layout">
+            </figure>
+            <div>
+              <span>01 Spatial System</span>
+              <h3>Separated routes and readable zoning</h3>
+              <p>Pet, owner, staff and emergency circulation are organized to reduce cross-traffic, noise and unnecessary contact during treatment.</p>
+            </div>
+          </article>
+          <article>
+            <figure class="pets-media pets-media--contain">
+              <img src="images/pets/pets-operating-display.png" alt="Operating room external display concept showing surgery progress and vital information">
+            </figure>
+            <div>
+              <span>02 Process Visibility</span>
+              <h3>Readable treatment feedback</h3>
+              <p>An external operating-room display communicates surgery progress, vital signs and basic health information to reduce uncertainty for owners.</p>
+            </div>
+          </article>
+          <article>
+            <figure class="pets-media pets-media--contain">
+              <img src="images/pets/pets-final-waiting-area.jpg" alt="Pet-friendly waiting furniture combining human and animal seating">
+            </figure>
+            <div>
+              <span>03 Waiting Experience</span>
+              <h3>Shared furniture with protected pet space</h3>
+              <p>Furniture integrates human seating with low, sheltered resting zones so pets can remain close to their owners without being fully exposed.</p>
+            </div>
+          </article>
+          <article>
+            <figure class="pets-media pets-media--contain">
+              <img src="images/pets/pets-ward-zoning.png" alt="Ward zoning and spatial allocation plan for different levels of veterinary care">
+            </figure>
+            <div>
+              <span>04 Ward Zoning</span>
+              <h3>Care intensity guides spatial allocation</h3>
+              <p>Critical care, postoperative recovery, isolation and observation areas are allocated according to urgency, supervision needs, circulation and environmental comfort.</p>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section class="detail-meta-board reveal" id="contact">
-      <div class="detail-meta-row">
-        <div class="detail-meta-label">Year</div>
-        <div class="detail-meta-value">2025</div>
-      </div>
-      <div class="detail-meta-row">
-        <div class="detail-meta-label">Tools</div>
-        <div class="detail-meta-value">Blender, research synthesis, service blueprinting, rendering</div>
-      </div>
-      <div class="detail-meta-row">
-        <div class="detail-meta-label">Category</div>
-        <div class="detail-meta-value">Pets Healthcare / Service Design</div>
+    <section class="pets-section reveal" id="challenge">
+      <div class="pets-shell">
+        <header class="pets-section__header">
+          <div class="pets-section-label">Design Challenge</div>
+          <div class="pets-section__intro">
+            <h2>Most veterinary clinics are planned around people first.</h2>
+            <p>
+              Existing clinic layouts often prioritize operational convenience while overlooking how animals respond to noise, crossing routes, separation and unfamiliar procedures.
+            </p>
+          </div>
+        </header>
+
+        <div class="pets-challenge-layout">
+          <figure class="pets-media pets-media--contain pets-challenge-visual">
+            <img src="images/pets/pets-problem-map.jpg" alt="Analysis of an existing pet hospital showing circulation conflicts and spatial pain points">
+          </figure>
+          <div class="pets-challenge-list">
+            <article><span>01</span><strong>Crossing Routes</strong><p>Pets, owners, staff and emergency movement overlap, increasing confusion and stress.</p></article>
+            <article><span>02</span><strong>Noise &amp; Exposure</strong><p>Open waiting and treatment areas offer limited acoustic control or protected retreat.</p></article>
+            <article><span>03</span><strong>Invisible Procedures</strong><p>Owners receive little process feedback while pets are separated for treatment.</p></article>
+            <article><span>04</span><strong>Generic Furniture</strong><p>Human-scaled seating rarely supports pet posture, sensory comfort or proximity needs.</p></article>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="detail-see-also reveal">
-      <div class="detail-see-also-header">
-        <span>See also</span>
+    <section class="pets-section reveal" id="strategy">
+      <div class="pets-shell">
+        <header class="pets-section__header">
+          <div class="pets-section-label">Design Strategy</div>
+          <div class="pets-section__intro">
+            <h2>Three principles organize the experience.</h2>
+            <p>The design translates animal-centered care into spatial, emotional and informational decisions.</p>
+          </div>
+        </header>
+
+        <div class="pets-principles">
+          <article>
+            <span>01</span>
+            <h3>Sensory Decompression</h3>
+            <p>Reduce stress through quieter routes, lower exposure, softer materials, calmer lighting and protected resting positions.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Emotional Accompaniment</h3>
+            <p>Keep pets and owners visually or physically connected where possible, while creating moments of reassurance during separation.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Process Visibility</h3>
+            <p>Use clear status information and readable service touchpoints to make care feel more understandable and less uncertain.</p>
+          </article>
+        </div>
       </div>
-      <div class="detail-see-also-list">
-        <a class="detail-see-also-card" href="project-sanitation.html">
-          <img src="assets/images/project1-panel1.jpg" alt="Coralline preview">
-          <div class="detail-see-also-copy">
-            <span>IoT / Physical Computing</span>
-            <strong>Coralline: Smart Purifier</strong>
+    </section>
+
+    <section class="pets-section reveal" id="research">
+      <div class="pets-shell">
+        <header class="pets-section__header">
+          <div class="pets-section-label">Research &amp; Criteria</div>
+          <div class="pets-section__intro">
+            <h2>From reference cases to a pet-friendly design framework.</h2>
+            <p>
+              Six veterinary and animal-care precedents were compared across spatial organization, circulation and furniture, then translated into a shared design criteria system.
+            </p>
           </div>
-          <div class="detail-see-also-arrow">&rarr;</div>
-        </a>
-        <a class="detail-see-also-card" href="project-earmura.html">
-          <img src="assets/images/project4-scene-1.png" alt="EARMURA preview">
-          <div class="detail-see-also-copy">
-            <span>Speculative Design</span>
-            <strong>EARMURA</strong>
+        </header>
+
+        <div class="pets-research-grid">
+          <figure class="pets-media pets-media--contain pets-research-cases">
+            <img src="images/pets/pets-research-cases.jpg" alt="Case study comparison of six pet-friendly veterinary and animal-care spaces">
+          </figure>
+          <figure class="pets-media pets-media--contain pets-research-framework">
+            <img src="images/pets/pets-research-framework.jpg" alt="Pet-friendly design criteria connecting space, flow and furniture">
+          </figure>
+        </div>
+
+        <div class="pets-research-summary">
+          <article><span>Space</span><p>Quiet zoning, visual retreat, pet separation and environmental comfort.</p></article>
+          <article><span>Flow</span><p>Clear circulation, direct first aid, reduced crossover and emergency access.</p></article>
+          <article><span>Furniture</span><p>Human-pet sharing, safe scale, soft contact and protected positions.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pets-section reveal" id="process">
+      <div class="pets-shell">
+        <header class="pets-section__header">
+          <div class="pets-section-label">Flow &amp; Space Design</div>
+          <div class="pets-section__intro">
+            <h2>A modular plan separates movement while keeping care connected.</h2>
+            <p>
+              Triangular modules were iterated to create clearer zoning, shorter treatment routes and more independent circulation for pets, owners, staff and emergencies.
+            </p>
           </div>
-          <div class="detail-see-also-arrow">&rarr;</div>
-        </a>
+        </header>
+
+        <figure class="pets-wide-media pets-wide-media--paper">
+          <img src="images/pets/pets-circulation-flow.png" alt="Spatial digital model showing modular zoning and circulation routes">
+        </figure>
+
+        <div class="pets-process-points">
+          <article><span>01</span><strong>Direct Medical Access</strong><p>Consulting, examination and operating areas are connected through shorter treatment routes.</p></article>
+          <article><span>02</span><strong>Separated Movement</strong><p>Staff, pet, owner and emergency paths remain legible and less likely to intersect.</p></article>
+          <article><span>03</span><strong>Vertical Priority</strong><p>Elevator access is divided by cats, dogs and emergency use to reduce conflict and delay.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pets-section reveal" id="iteration">
+      <div class="pets-shell">
+        <header class="pets-section__header">
+          <div class="pets-section-label">Prototype Iteration</div>
+          <div class="pets-section__intro">
+            <h2>Paper models exposed circulation and visibility problems early.</h2>
+            <p>
+              Two paper-prototype rounds were used to test spatial allocation, waiting-area separation, operating-room visibility and vertical circulation before the digital model was refined.
+            </p>
+          </div>
+        </header>
+
+        <div class="pets-iteration-layout">
+          <figure class="pets-media pets-media--contain pets-iteration-visual">
+            <img src="images/pets/pets-paper-prototype.jpg" alt="Two rounds of paper prototype iteration with spatial feedback">
+          </figure>
+          <div class="pets-iteration-list">
+            <article>
+              <span>Finding 01</span>
+              <strong>Space allocation was difficult to read.</strong>
+              <p>The plan was reorganized into clearer functional zones and more legible treatment connections.</p>
+            </article>
+            <article>
+              <span>Finding 02</span>
+              <strong>Waiting areas required stronger sensory separation.</strong>
+              <p>Pet routes and waiting positions were refined to reduce acoustic and visual conflict.</p>
+            </article>
+            <article>
+              <span>Finding 03</span>
+              <strong>Operating-room visibility needed careful control.</strong>
+              <p>Visibility was shifted toward filtered information and selective glazing rather than full exposure.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pets-section reveal" id="experience">
+      <div class="pets-shell">
+        <header class="pets-section__header">
+          <div class="pets-section-label">Experience Details</div>
+          <div class="pets-section__intro">
+            <h2>Small touchpoints extend the spatial strategy.</h2>
+            <p>Furniture scale, posture, material and information feedback support a calmer waiting and treatment experience.</p>
+          </div>
+        </header>
+
+        <div class="pets-detail-gallery">
+          <figure class="pets-media pets-media--contain">
+            <img src="images/pets/pets-waiting-seat-detail.png" alt="Side view of shared seating for pets and owners">
+            <figcaption>Shared seating keeps pets close while offering lower, protected resting levels.</figcaption>
+          </figure>
+          <figure class="pets-media pets-media--contain">
+            <img src="images/pets/pets-pheromone-diffuser.png" alt="Dual-position pheromone diffuser concept for veterinary waiting spaces">
+            <figcaption>A low-power diffuser concept supports calmer waiting through flexible placement.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="pets-section reveal" id="reflection">
+      <div class="pets-shell">
+        <header class="pets-section__header pets-section__header--reflection">
+          <div class="pets-section-label">Reflection</div>
+        </header>
+        <div class="pets-reflection-grid">
+          <article>
+            <span>What I Learned</span>
+            <p>This project helped me connect service logic, spatial planning, information design and physical touchpoints around one non-human user's experience.</p>
+          </article>
+          <article>
+            <span>Design Boundary</span>
+            <p>The proposal is based on research and prototype iteration; further development would require veterinary, behavioral and architectural validation.</p>
+          </article>
+          <article>
+            <span>Next Step</span>
+            <p>A future phase could test full-scale waiting modules, validate circulation with clinic staff and develop the operating-room information interface as an interactive prototype.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pets-meta reveal" id="contact">
+      <div class="pets-shell">
+        <div class="pets-meta-row"><span>Year</span><p>2025</p></div>
+        <div class="pets-meta-row"><span>Role</span><p>Research, service strategy, spatial design, information design, furniture design and 3D visualization</p></div>
+        <div class="pets-meta-row"><span>Tools</span><p>Blender, service blueprinting, spatial modeling, paper prototyping and rendering</p></div>
+        <div class="pets-meta-row"><span>Category</span><p>Animal-Centered Design / Service Design / Spatial Experience</p></div>
+      </div>
+    </section>
+
+    <section class="pets-see-also reveal" aria-labelledby="pets-see-also-title">
+      <div class="pets-shell">
+        <header>
+          <span id="pets-see-also-title">See also</span>
+        </header>
+        <div class="pets-see-also-list">
+          <a href="project-five.html">
+            <img src="images/beecue index.png" alt="Bee Cue project preview">
+            <div><span>Predictive Systems</span><strong>Bee Cue</strong></div>
+            <b aria-hidden="true">→</b>
+          </a>
+          <a href="project-sanitation.html">
+            <img src="images/coralline index.png" alt="Coralline Smart Purifier project preview">
+            <div><span>Smart Systems</span><strong>Coralline: Smart Purifier</strong></div>
+            <b aria-hidden="true">→</b>
+          </a>
+        </div>
       </div>
     </section>
   </main>
