@@ -3,93 +3,306 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coralline: Smart Purifier | Yin Jiangnan</title>
+  <title>Coralline: Smart Dual-Core Air Purifier | Yin Jiangnan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="landing-dark detail-page-dark">
+<body class="coralline-page">
   <div class="progress-bar" aria-hidden="true"></div>
 
-  <header class="floating-nav detail-floating-nav">
-    <a href="index.html">Index</a>
-    <a href="#intro">Info</a>
-    <a href="index.html#works">Works</a>
-    <a href="#contact">Contact</a>
+  <header class="site-nav coralline-site-nav" data-site-nav>
+    <a class="site-nav-brand" href="index.html" aria-label="Go to index">
+      <span>Yin Jiangnan</span>
+      <span>/ Nevena</span>
+    </a>
+    <nav class="floating-nav coralline-main-nav" aria-label="Primary navigation">
+      <a href="index.html">Index</a>
+      <a href="index.html#works">Works</a>
+      <a href="#overview">Info</a>
+      <a href="#outcome">Outcome</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main>
-    <section class="detail-hero-banner reveal">
-      <img src="assets/images/project1-panel1.jpg" alt="Coralline cover image">
-      <h1>CORALLINE</h1>
+    <section class="coralline-hero reveal" id="top">
+      <div class="coralline-shell coralline-hero__inner">
+        <header class="coralline-hero__copy">
+          <p class="coralline-eyebrow">Product Concept / Physical Computing</p>
+          <h1>Coralline</h1>
+          <h2>Smart dual-core air purifier for public restrooms.</h2>
+          <p>
+            An eco-friendly device that combines air purification, plant cultivation and intelligent management to support healthier restroom environments for cleaning staff.
+          </p>
+          <div class="coralline-tags" aria-label="Project attributes">
+            <span>Air Purification</span>
+            <span>Arduino Prototype</span>
+            <span>Sustainability</span>
+            <span>Public Restroom</span>
+          </div>
+        </header>
+        <figure class="coralline-hero__media">
+          <img src="images/coralline/coralline-hero.png" alt="Coralline smart dual-core air purifier hero presentation">
+        </figure>
+      </div>
     </section>
 
-    <section class="detail-intro-grid reveal" id="intro">
-      <div class="detail-intro-label">Intro</div>
-      <div class="detail-intro-main">
-        <p>
-          Coralline is a smart purifier concept that combines physical computing, sensing, and sustainability thinking. Inspired by coral form and environmental cycles, the project explores how a hardware object can integrate air purification, planting, and long-term care.
-        </p>
-        <div class="detail-side-block">
-          <span>Deliverables:</span>
-          <div class="detail-side-list">
-            <div>Physical Computing</div>
-            <div>Arduino Prototype</div>
-            <div>Smart Sensing</div>
-            <div>Bio-inspired Design</div>
-            <div>Sustainability Strategy</div>
+    <nav class="coralline-anchor-nav reveal" aria-label="Case study navigation">
+      <a href="#overview">Overview</a>
+      <a href="#outcome">Outcome</a>
+      <a href="#challenge">Challenge</a>
+      <a href="#iteration">Iteration</a>
+      <a href="#test">Testing</a>
+      <a href="#next-steps">Next Steps</a>
+    </nav>
+
+    <section class="coralline-overview reveal" id="overview">
+      <div class="coralline-shell coralline-overview__grid">
+        <header class="coralline-section-label">Project Overview</header>
+        <div class="coralline-overview__content">
+          <p class="coralline-lead">
+            Coralline is a smart dual-core air purifier concept for public restrooms, connecting air-quality sensing, fan response, plant cultivation and staff-facing maintenance controls.
+          </p>
+          <div class="coralline-info-grid">
+            <div>
+              <span>Project Type</span>
+              <p>Academic Project / Product Concept / Smart Device</p>
+            </div>
+            <div>
+              <span>My Contribution</span>
+              <p>Product research, concept development, physical computing prototype, interface logic and visual presentation</p>
+            </div>
+            <div>
+              <span>Duration</span>
+              <p>2024</p>
+            </div>
+            <div>
+              <span>Deliverables</span>
+              <p>Air purifier concept, Arduino prototype, management interface, product scenario and final presentation board</p>
+            </div>
+            <div>
+              <span>Tools &amp; Methods</span>
+              <p>Arduino, Tinkercad, physical prototyping, 3D visualization and product system thinking</p>
+            </div>
+            <div>
+              <span>Context</span>
+              <p>Public restroom sanitation and cleaning-staff operation</p>
+            </div>
           </div>
-          <div class="detail-pills">
-            <em>Year / 2024</em>
-            <em>Project / Coralline</em>
-            <em>Type / Product Concept</em>
+          <div class="coralline-boundary-note">
+            <strong>Project Scope</strong>
+            <p>This is a product-system proposal and physical computing prototype. The page currently keeps image slots as placeholders for later replacement with selected final assets.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="detail-gallery-grid reveal">
-      <figure><img src="assets/images/project1-panel1.jpg" alt="Coralline board one"></figure>
-      <figure><img src="assets/images/project1-panel2.jpg" alt="Coralline board two"></figure>
+    <section class="coralline-section reveal" id="outcome">
+      <div class="coralline-shell">
+        <header class="coralline-section__header">
+          <div class="coralline-section-label">Final Outcome</div>
+          <div class="coralline-section__intro">
+            <h2>A purifier system that combines air cleaning, plant care and staff-facing intelligence.</h2>
+            <p>
+              The final proposal brings the physical purifier, ecological material language and maintenance interface into one coordinated product experience.
+            </p>
+          </div>
+        </header>
+
+        <div class="coralline-outcome-grid">
+          <article>
+            <figure class="coralline-media">
+              <img src="images/coralline/coralline-product-form.png" alt="Coralline product form presentation">
+            </figure>
+            <div>
+              <span>01 Product Object</span>
+              <h3>Coral-like transparent purifier</h3>
+              <p>A soft, organic shell language helps the object feel less industrial inside public restroom space.</p>
+            </div>
+          </article>
+          <article>
+            <figure class="coralline-media">
+              <img src="images/coralline/coralline-management-interface.png" alt="Coralline staff management interface">
+            </figure>
+            <div>
+              <span>02 Staff Operation</span>
+              <h3>Readable maintenance controls</h3>
+              <p>Filter lifespan, wind speed, timing and air-quality targets are organized for daily cleaning staff decisions.</p>
+            </div>
+          </article>
+          <article>
+            <figure class="coralline-media">
+              <img src="images/coralline/coralline-arduino-prototype.png" alt="Coralline Arduino air-quality sensor and fan-control prototype">
+            </figure>
+            <div>
+              <span>03 Physical Computing</span>
+              <h3>Sensor-triggered fan response</h3>
+              <p>Air-quality readings drive a simple threshold logic that turns purification on and off.</p>
+            </div>
+          </article>
+          <article>
+            <figure class="coralline-media">
+              <img src="images/coralline/coralline-dual-filter-system.png" alt="Coralline dual-filter key feature presentation">
+            </figure>
+            <div>
+              <span>04 Dual Filter System</span>
+              <h3>Two filter cores for layered purification</h3>
+              <p>The key feature shifts from restroom placement to two complementary filter types that support odor removal and ventilation as a replaceable product system.</p>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section class="detail-meta-board reveal" id="contact">
-      <div class="detail-meta-row">
-        <div class="detail-meta-label">Year</div>
-        <div class="detail-meta-value">2024</div>
-      </div>
-      <div class="detail-meta-row">
-        <div class="detail-meta-label">Tools</div>
-        <div class="detail-meta-value">Arduino, prototyping, modeling, physical product thinking</div>
-      </div>
-      <div class="detail-meta-row">
-        <div class="detail-meta-label">Category</div>
-        <div class="detail-meta-value">IoT / Physical Computing</div>
+    <section class="coralline-section reveal" id="challenge">
+      <div class="coralline-shell">
+        <header class="coralline-section__header">
+          <div class="coralline-section-label">Design Challenge</div>
+          <div class="coralline-section__intro">
+            <h2>Public restroom air quality is usually treated as maintenance, not experience.</h2>
+            <p>
+              Coralline reframes restroom purification as a service object for cleaning staff. Instead of only filtering air, the device makes air quality, filter lifespan and operation time easier to monitor and adjust.
+            </p>
+          </div>
+        </header>
+
+        <div class="coralline-challenge-layout">
+          <figure class="coralline-media">
+            <img src="images/coralline/coralline-restroom-context.png" alt="Public restroom sanitation and air-quality context">
+          </figure>
+          <div class="coralline-challenge-list">
+            <article><span>01</span><strong>Air quality is invisible</strong><p>Staff need clearer feedback about when purification is needed and when it can stop.</p></article>
+            <article><span>02</span><strong>Maintenance is fragmented</strong><p>Filter lifespan, operating time and cleaning routines are often managed separately.</p></article>
+            <article><span>03</span><strong>Sanitation objects feel mechanical</strong><p>The product needs to belong in public restrooms without adding more hard technical clutter.</p></article>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="detail-see-also reveal">
-      <div class="detail-see-also-header">
-        <span>See also</span>
+    <section class="coralline-section reveal" id="iteration">
+      <div class="coralline-shell">
+        <header class="coralline-section__header">
+          <div class="coralline-section-label">Iteration</div>
+          <div class="coralline-section__intro">
+            <h2>Potential solutions were narrowed through modeling and material exploration.</h2>
+            <p>
+              Early directions compared purification placement, filter access, shell form and material behavior. Modeling and material exploration helped translate the concept from a restroom sanitation problem into a product with visible structure and maintainable parts.
+            </p>
+          </div>
+        </header>
+        <div class="coralline-research-grid coralline-iteration-stack">
+          <figure class="coralline-media">
+            <img src="images/coralline/coralline-potential-solutions.png" alt="Coralline potential solutions exploration">
+          </figure>
+          <figure class="coralline-media">
+            <img src="images/coralline/coralline-modeling-material-exploration.png" alt="Coralline modeling and material exploration">
+          </figure>
+        </div>
       </div>
-      <div class="detail-see-also-list">
-        <a class="detail-see-also-card" href="project-five.html">
-          <div class="detail-see-also-thumb">ApisLogic</div>
-          <div class="detail-see-also-copy">
-            <span>Decision Support</span>
-            <strong>ApisLogic</strong>
+    </section>
+
+    <section class="coralline-section reveal" id="test">
+      <div class="coralline-shell">
+        <header class="coralline-section__header">
+          <div class="coralline-section-label">Odor Removal &amp; Ventilation Test</div>
+          <div class="coralline-section__intro">
+            <h2>Filter combinations were tested for odor removal and ventilation performance.</h2>
+            <p>
+              This section focuses on how the main filter materials work together, comparing odor-removal potential and airflow behavior before the product logic is translated into staff-facing controls.
+            </p>
           </div>
-          <div class="detail-see-also-arrow">&rarr;</div>
-        </a>
-        <a class="detail-see-also-card" href="project-pets.html">
-          <img src="assets/images/project2-space-overview.png" alt="From the Pet's Perspective preview">
-          <div class="detail-see-also-copy">
-            <span>Service Design</span>
-            <strong>From the Pet's Perspective</strong>
+        </header>
+        <div class="coralline-system-layout coralline-test-layout">
+          <div class="coralline-test-media-grid">
+            <figure class="coralline-media coralline-media--full">
+              <img src="images/coralline/coralline-assembly-volume-test.png" alt="Coralline assembly volume test">
+            </figure>
+            <figure class="coralline-media coralline-media--full">
+              <img src="images/coralline/coralline-odor-removal-test.png" alt="Coralline odor removal test">
+            </figure>
+            <figure class="coralline-media coralline-media--full">
+              <img src="images/coralline/coralline-ventilation-flow-test.png" alt="Coralline ventilation flow test">
+            </figure>
           </div>
-          <div class="detail-see-also-arrow">&rarr;</div>
-        </a>
+          <div class="coralline-system-list">
+            <article>
+              <span>01</span>
+              <h3>Assembly volume test</h3>
+              <p>A low-fidelity test shell was used to check internal spacing, component order and maintenance access before the final product housing was developed.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Odor removal</h3>
+              <p>Testing focused on how the filter setup could reduce unpleasant restroom smells without adding heavy maintenance.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Ventilation flow</h3>
+              <p>Air movement was checked so the purifier could support circulation rather than simply contain odor.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="coralline-section reveal" id="next-steps">
+      <div class="coralline-shell">
+        <header class="coralline-section__header">
+          <div class="coralline-section-label">User Testing &amp; Future Iteration</div>
+          <div class="coralline-section__intro">
+            <h2>The next phase would validate the product through staff use and maintenance scenarios.</h2>
+            <p>
+              After form, filter and ventilation logic were defined, the project would move into user testing with cleaning staff to evaluate operation clarity, refill routines and long-term restroom placement.
+            </p>
+          </div>
+        </header>
+        <div class="coralline-system-layout">
+          <figure class="coralline-media coralline-media--full">
+            <img src="images/coralline/coralline-user-testing-plan.png" alt="Coralline user testing plan with cleaning staff">
+          </figure>
+          <div class="coralline-system-list">
+            <article><span>01</span><h3>Staff walkthrough</h3><p>Invite cleaning staff to complete daily operation tasks and identify where status, timing or filter information feels unclear.</p></article>
+            <article><span>02</span><h3>Maintenance routine</h3><p>Test how easily filters can be checked, replaced and recorded during normal restroom cleaning cycles.</p></article>
+            <article><span>03</span><h3>Placement refinement</h3><p>Compare wall, counter and corner positions to balance airflow, visibility, accessibility and restroom traffic.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="coralline-meta coralline-shell reveal" id="contact">
+      <div class="coralline-meta-row">
+        <span>Tools</span>
+        <p>Arduino, Tinkercad, physical prototyping, 3D visualization, product system thinking</p>
+      </div>
+      <div class="coralline-meta-row">
+        <span>Focus</span>
+        <p>Air purification, dual-filter system, odor removal, ventilation testing, cleaning-staff operation and future iteration planning</p>
+      </div>
+      <div class="coralline-meta-row">
+        <span>Material Language</span>
+        <p>Transparent coral-like shell, porous filter structure, blue light feedback, restroom-scale placement</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="coralline-see-also-title" class="coralline-see-also reveal">
+      <div class="coralline-shell">
+        <header>
+          <span id="coralline-see-also-title">See also</span>
+        </header>
+        <div class="coralline-see-also-list">
+          <a href="project-five.html">
+            <img alt="Bee Cue project preview" src="images/beecue index.png">
+            <div><span>Predictive Support System</span><strong>Bee Cue</strong></div>
+            <b aria-hidden="true">→</b>
+          </a>
+          <a href="project-pets.html">
+            <img alt="From the Pet's Perspective project preview" src="images/pets index.png">
+            <div><span>Animal-Centered Design</span><strong>From the Pet's Perspective</strong></div>
+            <b aria-hidden="true">→</b>
+          </a>
+        </div>
       </div>
     </section>
   </main>

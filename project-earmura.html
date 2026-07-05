@@ -4,81 +4,115 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EARMURA | Yin Jiangnan</title>
+  <meta name="description" content="EARMURA is an interactive narrative, web prototype and system design case study by Yin Jiangnan.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="landing-dark detail-page-dark">
+<body class="landing-dark detail-page-dark earmura-page">
   <div class="progress-bar" aria-hidden="true"></div>
 
-  <header class="floating-nav detail-floating-nav">
-    <a href="index.html">Index</a>
-    <a href="#intro">Info</a>
-    <a href="index.html#works">Works</a>
-    <a href="#contact">Contact</a>
+  <header class="site-nav earmura-site-nav" data-site-nav>
+    <a class="site-nav-brand" href="index.html" aria-label="Yin Jiangnan home">
+      <span>Yin Jiangnan</span>
+      <span>/ Nevena</span>
+    </a>
+    <nav class="floating-nav earmura-main-nav" aria-label="Primary navigation">
+      <a href="index.html">Index</a>
+      <a href="index.html#works">Works</a>
+      <a href="#overview">Info</a>
+      <a href="#website">Website</a>
+      <a href="#film">Film</a>
+      <a href="#contact">Contact</a>
+      <a href="https://neeeveee.github.io/earmura-site/" target="_blank" rel="noreferrer">Live</a>
+    </nav>
   </header>
 
   <main>
-    <section class="detail-hero-banner reveal">
-      <img src="images/hero.png" alt="EARMURA cover image">
+    <section class="detail-hero-banner earmura-hero reveal" id="top">
+      <img src="images/earmura/earmura-hero.png" alt="EARMURA interactive response-system hero image">
       <div class="earmura-hero-copy">
-        <p>Speculative Religion &amp; Interactive Website</p>
+        <p>Interactive Narrative / Web Prototype / System Design</p>
         <h1>EARMURA</h1>
-        <span>When technology becomes the medium of faith, how are human desire and belief translated, heard, and reshaped?</span>
+        <span>A working web prototype that turns voice input, narrative roles and decision logic into an interactive response-system experience.</span>
+        <div class="earmura-hero-actions">
+          <a href="https://neeeveee.github.io/earmura-site/" target="_blank" rel="noreferrer">Visit Live Portal</a>
+          <a href="https://youtu.be/R1Z5vcuJS8I?si=3iYVltw_bXWBsrP2" target="_blank" rel="noreferrer">Watch Concept Film</a>
+        </div>
       </div>
     </section>
 
-    <section class="detail-intro-grid reveal" id="intro">
-      <div class="detail-intro-label">Intro</div>
+    <nav class="earmura-anchor-nav reveal" aria-label="Case study navigation">
+      <a href="#overview">Overview</a>
+      <a href="#website">Website</a>
+      <a href="#film">Film</a>
+      <a href="#contribution">Contribution</a>
+    </nav>
+
+    <section class="detail-intro-grid earmura-overview reveal" id="overview">
+      <div class="detail-intro-label">Project Overview</div>
       <div class="detail-intro-main">
         <p>
-          EARMURA is not just a speculative religion website. It is a designed governance system that turns the human need to be heard into an interface, an algorithm, and a structure of control. Through world-building, interaction design, and system logic, the project asks how faith changes when response itself becomes a managed product.
+          EARMURA is an interactive narrative project delivered as a live website and a narrative video. The website lets users enter the story through voice-based interaction, while the film extends the same world into a cinematic experience.
         </p>
-        <div class="detail-side-block">
-          <span>Deliverables:</span>
-          <div class="detail-side-list">
-            <div>Web Design</div>
-            <div>Speculative Design</div>
-            <div>System Architecture</div>
-            <div>Decision Logic</div>
-            <div>Full-stack Prototype</div>
+        <div class="earmura-info-grid">
+          <div>
+            <span>Project Type</span>
+            <p>Personal Project / Interactive Narrative / Web Prototype / System Design</p>
           </div>
-          <div class="detail-pills">
-            <em>Year / 2025</em>
-            <em>Project / EARMURA</em>
-            <em>Type / Personal</em>
-            <em>Role / Designer</em>
-            <em>Duration / 1 Month</em>
+          <div>
+            <span>My Contribution</span>
+            <p>Website prototype, interaction flow, narrative structure, visual direction, Web Audio interaction and front-end implementation</p>
+          </div>
+          <div>
+            <span>Duration</span>
+            <p>1 month / 2025</p>
+          </div>
+          <div>
+            <span>Deliverables</span>
+            <p>Live interactive website, narrative film, interface visuals and interaction flow</p>
+          </div>
+          <div>
+            <span>Tools</span>
+            <p>HTML, CSS, JavaScript, Web Audio API, narrative systems and audiovisual direction</p>
+          </div>
+          <div>
+            <span>Validation Status</span>
+            <p>Working prototype and narrative film completed; formal user testing was not part of this one-month prototype sprint.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="case-study-section reveal problem-research-section">
-      <div class="case-study-label">Concept Film</div>
+    <section class="case-study-section earmura-outcome reveal" id="website">
+      <div class="case-study-label">Website Prototype</div>
       <div class="case-study-body">
         <div class="case-study-copy">
-          <h2>A narrative entry into the system</h2>
+          <h2>The live website is the main final outcome.</h2>
           <p>
-            Alongside the interactive website, EARMURA includes a concept film that establishes the emotional tone of the world. It frames the project not as a single interface, but as a larger mediated belief system shaped by ritual, listening, and institutional control.
+            The portal turns the project from a static concept into an interactive experience. Users move through the narrative through web pages, voice input, waveform feedback and response states.
           </p>
-          <p>
-            The film is important because it expands the project beyond screen interaction. It helps the audience enter the logic of the system before encountering its interfaces, making the website feel like one living part of a broader social machine.
-          </p>
-        </div>
-        <div class="case-study-rail">
-          <a class="case-study-link" href="https://youtu.be/R1Z5vcuJS8I" target="_blank" rel="noreferrer">
-            Watch Concept Film
-            <span>YouTube short film</span>
-          </a>
-          <a class="case-study-link" href="https://neeeveee.github.io/earmura-site/" target="_blank" rel="noreferrer">
-            Visit Live Portal
-            <span>Interactive website</span>
-          </a>
         </div>
       </div>
-      <div class="detail-video-embed">
+      <a class="earmura-prototype-preview" href="https://neeeveee.github.io/earmura-site/" target="_blank" rel="noreferrer" aria-label="Open the live EARMURA website prototype">
+        <figure class="detail-asset-figure">
+          <img src="images/earmura/earmura-prototype.png" alt="EARMURA live website prototype preview">
+        </figure>
+      </a>
+    </section>
+
+    <section class="case-study-section earmura-film-section reveal" id="film">
+      <div class="case-study-label">Narrative Video</div>
+      <div class="case-study-body">
+        <div class="case-study-copy">
+          <h2>The film shows the world and emotional logic behind the interface.</h2>
+          <p>
+            The narrative video works as the second final output. It gives context to the website experience, showing the atmosphere, roles and consequences that the interface only hints at.
+          </p>
+        </div>
+      </div>
+      <div class="detail-video-embed earmura-film-embed">
         <iframe
           src="https://www.youtube-nocookie.com/embed/R1Z5vcuJS8I?rel=0"
           title="EARMURA concept film"
@@ -90,217 +124,37 @@
       </div>
     </section>
 
-    <section class="case-study-section reveal">
-      <div class="case-study-label">Problem &amp; Research</div>
+    <section class="case-study-section earmura-decisions reveal" id="contribution">
+      <div class="case-study-label">My Contribution</div>
       <div class="case-study-body">
         <div class="case-study-copy">
-          <h2>The need to be heard in uncertainty</h2>
+          <h2>I connected the story, interface and prototype into one deliverable.</h2>
           <p>
-            EARMURA begins from a psychological condition rather than a visual fiction. In unstable systems, people search for signals that confirm they have been noticed, acknowledged, and understood. The project reframes religion as a response architecture built around this emotional dependence.
+            My role covered the full experience: shaping the narrative premise, designing the web interaction, building the front-end prototype and directing the visual rhythm of the website and film.
           </p>
-          <p>
-            The research insight is simple but powerful: even minimal confirmation mechanisms such as status updates or attention signals can reduce anxiety and increase satisfaction. That means the feeling of being heard can be produced, staged, and optimized. EARMURA takes that premise seriously and asks what happens when an entire belief system is built on top of it.
-          </p>
-        </div>
-        <div class="case-study-rail">
-          <div class="earmura-research-panel">
-            <div class="earmura-metric-strip">
-              <div>
-                <strong>262%</strong>
-                <span>reported reduction in anxiety under acknowledgment-based feedback</span>
-              </div>
-              <div>
-                <strong>160%</strong>
-                <span>increase in satisfaction when response signals remain visible</span>
-              </div>
-              <div>
-                <strong>Core insight</strong>
-                <span>acknowledgment itself can become infrastructure</span>
-              </div>
-            </div>
-            <figure class="detail-asset-figure detail-asset-figure-metric problem-research-graphic">
-              <img src="images/Problem%20%26%20Research.png" alt="EARMURA emotional comfort in uncertainty research graphic">
-            </figure>
-          </div>
         </div>
       </div>
-    </section>
-
-    <section class="case-study-section reveal">
-      <div class="case-study-label">World-building</div>
-      <div class="case-study-body">
-        <div class="case-study-copy">
-          <h2>A religion designed as social infrastructure</h2>
-          <p>
-            Set after a large-scale collapse, EARMURA imagines a future in which governance restores order by turning faith into infrastructure. By 3222, the state-backed deity no longer simply receives prayer; it classifies, sequences, and prioritizes it.
-          </p>
-          <p>
-            Social hierarchy is embedded directly into the interface. <strong>Ming</strong>, <strong>Xin</strong>, and <strong>Zhong</strong> each receive different levels of response, shaping belief through unequal access to system attention. In this world, divine recognition is no longer spiritual equality; it is a permission structure.
-          </p>
-        </div>
-        <div class="case-study-rail">
-          <div class="earmura-hierarchy-card">
-            <strong>Religious Structure</strong>
-            <div class="earmura-hierarchy-list">
-              <div>
-                <span>Earmura</span>
-                <p>The one and only god that hears all wishes.</p>
-              </div>
-              <div>
-                <span>Ming</span>
-                <p>Chosen messengers who can convey wishes and interpret responses.</p>
-              </div>
-              <div>
-                <span>Government</span>
-                <p>The technical agency that controls monitoring, judgment, and system maintenance.</p>
-              </div>
-              <div>
-                <span>Xin</span>
-                <p>High-resource believers with faster channels and higher response priority.</p>
-              </div>
-              <div>
-                <span>Zhong</span>
-                <p>Ordinary believers who wait longer and receive filtered responses.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="detail-gallery-grid">
-        <figure class="detail-asset-figure"><img src="images/World-building.png" alt="EARMURA world building story board"></figure>
-      </div>
-    </section>
-
-    <section class="case-study-section reveal">
-      <div class="case-study-label">System Architecture</div>
-      <div class="case-study-body">
-        <div class="case-study-copy">
-          <h2>The belief algorithm as product logic</h2>
-          <p>
-            Every wish submitted to EARMURA passes through a hard gate before entering a weighted utility calculation. The system does not answer prayer equally; it scores requests against rule-based constraints and a ten-dimensional utility model, producing outcomes such as approval, delay, or rejection.
-          </p>
-          <p>
-            This is the PM core of the project. Belief is operationalized into routing logic, decision thresholds, weighted priorities, and explainable outputs. Instead of treating faith as mystery alone, EARMURA asks what faith looks like once it is productized into a decision engine.
-          </p>
-        </div>
-        <div class="case-study-rail">
-          <div class="case-study-note">
-            <strong>Logic structure</strong>
-            <p>1. Voice input</p>
-            <p>2. Hard gate validation</p>
-            <p>3. U_base weighted scoring</p>
-            <p>4. Output: Yes / Later / No</p>
-            <p>5. Explanation management and emotional aftercare</p>
-          </div>
-        </div>
-      </div>
-      <div class="detail-gallery-split">
-        <div class="detail-gallery-copy">
-          <strong>Decision support, not divine spontaneity</strong>
-          <p>
-            The system architecture reframes prayer as a routing problem. Requests are filtered, modeled, and evaluated across multiple weighted dimensions before a controlled response is returned. What looks sacred on the surface is operationally a decision engine.
-          </p>
-        </div>
-        <figure class="detail-asset-figure detail-asset-figure-right"><img src="images/System%20Architecture.png" alt="EARMURA intelligence board and decision tree system architecture graphic"></figure>
-      </div>
-    </section>
-
-    <section class="case-study-section reveal">
-      <div class="case-study-label">Backend</div>
-      <div class="case-study-body">
-        <div class="case-study-copy">
-          <h2>Ming's Tribunal and controlled sacred noise</h2>
-          <p>
-            On the administrative side, the system is operated by Ming, the human intermediary layer that monitors emotional patterns, response distribution, and social stability. The deity is therefore never fully divine; it is mediated, maintained, and strategically interpreted.
-          </p>
-          <p>
-            The concept of divine noise is key here. Uncertainty is not a bug but a governance tool. A calibrated amount of ambiguity keeps the deity believable while still allowing the system to remain legible to its operators. EARMURA is strongest here as a critique of response power: whoever controls acknowledgment also controls obedience.
-          </p>
-        </div>
-        <div class="case-study-rail">
-          <div class="case-study-note">
-            <strong>Governance logic</strong>
-            <p>Response is a resource.</p>
-            <p>Opacity preserves authority.</p>
-            <p>Ambiguity sustains belief.</p>
-          </div>
-        </div>
-      </div>
-      <div class="detail-gallery-split detail-gallery-split-reverse">
-        <div class="detail-gallery-copy">
-          <strong>Back-end true reason</strong>
-          <p>
-            The back-end reveals how response is actually managed: through compliance profiling, quota logic, resource feasibility, and calculated unpredictability. In other words, EARMURA does not simply decide whether a wish is sincere. It decides whether answering that wish is useful to the system.
-          </p>
-        </div>
-        <figure class="detail-asset-figure detail-asset-figure-right"><img src="images/Backend.png" alt="EARMURA backend true reason scoring board"></figure>
-      </div>
-    </section>
-
-    <section class="case-study-section reveal">
-      <div class="case-study-label">Frontend &amp; Interaction</div>
-      <div class="case-study-body">
-        <div class="case-study-copy">
-          <h2>Voice, waveform, and ritual interface</h2>
-          <p>
-            The frontend translates prayer into live interaction. Using the Web Audio API, the interface captures spoken input and renders waveform feedback in real time, turning prayer into measurable interface behavior while preserving a ceremonial tone. Ritual becomes a UX flow.
-          </p>
-          <p>
-            The "Give" interface pushes the satire further. Faith becomes quantifiable, transactional, and data-driven. Ritual is no longer just spiritual participation; it becomes an optimized input stream, and devotion starts to look like platform engagement.
-          </p>
-        </div>
-        <div class="case-study-rail">
-          <div class="case-study-note">
-            <strong>Implementation focus</strong>
-            <p>Live audio capture</p>
-            <p>Waveform rendering</p>
-            <p>Interactive ritual states</p>
-            <p>Data-driven UI satire</p>
-          </div>
-          <a class="case-study-link" href="https://neeeveee.github.io/earmura-site/" target="_blank" rel="noreferrer">
-            Portal to EARMURA
-            <span>Live interactive site</span>
-          </a>
-        </div>
-      </div>
-      <div class="detail-gallery-split detail-gallery-split-reverse">
-        <div class="detail-gallery-copy">
-          <strong>Live audio capture and responsive ritual states</strong>
-          <p>
-            The prayer flow is grounded in spoken input. Voice is recorded, visualized as waveform feedback, and translated into a live state change that makes the interface feel responsive without breaking the project&apos;s ceremonial tone.
-          </p>
-          <p>
-            Alongside the audio interaction, the site extends belief into transactional UI. The &quot;Give&quot; page frames devotion as quantifiable offering, reinforcing the project&apos;s critique of platform logic, optimization, and measurable faith.
-          </p>
-        </div>
-        <figure class="detail-asset-figure detail-asset-figure-right"><img src="images/wave.png" alt="EARMURA waveform interaction interface"></figure>
-      </div>
-      <div class="detail-gallery-grid detail-gallery-grid-balanced">
-        <figure class="detail-asset-figure"><img src="images/give.png" alt="EARMURA Give interface"></figure>
-        <figure class="detail-asset-figure"><img src="images/%E6%95%B4%E4%BD%93%E7%95%8C%E9%9D%A2.png" alt="EARMURA full interface overview"></figure>
-      </div>
-    </section>
-
-    <section class="case-study-section reveal">
-      <div class="case-study-label">Reflection &amp; Impact</div>
-      <div class="case-study-body">
-        <div class="case-study-copy">
-          <h2>When transparency fails to free the believer</h2>
-          <p>
-            The ending of EARMURA is intentionally tragic. Even after truth is uncovered, Vincent is ultimately absorbed by the system he tried to understand. The project asks whether exposing algorithmic governance is enough once dependence has already been internalized.
-          </p>
-          <p>
-            Rather than offering a clean moral resolution, the work sits inside the tension between technological convenience and ethical autonomy. EARMURA does not ask whether technology can simulate belief; it asks whether systems of response can quietly replace freedom with managed reassurance.
-          </p>
-        </div>
-        <div class="case-study-rail">
-          <div class="detail-pills detail-pills-tags">
-            <em>System Architecture</em>
-            <em>Algorithmic Transparency</em>
-            <em>Full-stack Dev</em>
-            <em>Speculative UX</em>
-          </div>
-        </div>
+      <div class="earmura-decision-grid">
+        <article>
+          <span>01</span>
+          <h3>Interactive website</h3>
+          <p>Designed and built the live portal with HTML, CSS, JavaScript and Web Audio API interaction.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Narrative structure</h3>
+          <p>Defined the user-facing story flow, roles and response moments that guide the website experience.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Video direction</h3>
+          <p>Used the film to communicate atmosphere, stakes and the broader world behind the interface.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>System design</h3>
+          <p>Translated narrative rules into clear interface states so the experience could function as a coherent prototype.</p>
+        </article>
       </div>
     </section>
 
@@ -311,7 +165,7 @@
       </div>
       <div class="detail-meta-row">
         <div class="detail-meta-label">Role</div>
-        <div class="detail-meta-value">Independent designer</div>
+        <div class="detail-meta-value">Independent designer and front-end developer</div>
       </div>
       <div class="detail-meta-row">
         <div class="detail-meta-label">Duration</div>
@@ -319,11 +173,11 @@
       </div>
       <div class="detail-meta-row">
         <div class="detail-meta-label">Tools</div>
-        <div class="detail-meta-value">VS Code, HTML, CSS, JavaScript, Web Audio API, narrative systems, audiovisual atmosphere</div>
+        <div class="detail-meta-value">HTML, CSS, JavaScript, Web Audio API, narrative systems, audiovisual direction</div>
       </div>
       <div class="detail-meta-row">
         <div class="detail-meta-label">Category</div>
-        <div class="detail-meta-value">Speculative Design / Web Design</div>
+        <div class="detail-meta-value">Interactive Narrative / Web Prototype / System Design</div>
       </div>
       <div class="detail-meta-row">
         <div class="detail-meta-label">Link</div>
@@ -336,18 +190,18 @@
         <span>See also</span>
       </div>
       <div class="detail-see-also-list">
-        <a class="detail-see-also-card" href="project-four.html">
-          <div class="detail-see-also-thumb">He Said It's Clean</div>
+        <a class="detail-see-also-card" href="project-sanitation.html">
+          <img src="images/coralline index.png" alt="Coralline smart purifier project preview">
           <div class="detail-see-also-copy">
-            <span>Behavioral Design</span>
-            <strong>He Said It's Clean</strong>
+            <span>Product Concept</span>
+            <strong>Coralline</strong>
           </div>
           <div class="detail-see-also-arrow">&rarr;</div>
         </a>
         <a class="detail-see-also-card" href="project-pets.html">
-          <img src="assets/images/project2-space-overview.png" alt="From the Pet's Perspective preview">
+          <img src="images/pets index.png" alt="From the Pet's Perspective project preview">
           <div class="detail-see-also-copy">
-            <span>Pets Healthcare</span>
+            <span>Animal-Centered Design</span>
             <strong>From the Pet's Perspective</strong>
           </div>
           <div class="detail-see-also-arrow">&rarr;</div>

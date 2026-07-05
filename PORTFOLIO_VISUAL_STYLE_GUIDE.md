@@ -8,7 +8,7 @@
 
 - 轻量、编辑感、克制的个人作品集。
 - 以作品图像、项目节奏和系统思考为主，文字保持短而清晰。
-- 视觉语言接近艺术院校作品集和独立设计师网站：留白充足、细线分隔、低装饰、低卡片化。
+- 视觉语言接近艺术院校作品集和独立设计师网站：留白充足、图像主导、低装饰、低卡片化，线条只用于必要的结构提示。
 - 页面需要让项目内容显得有研究深度，但界面本身不能压过作品。
 
 推荐的设计参数：
@@ -49,7 +49,7 @@
 
 | Token | Value | Use |
 | --- | --- | --- |
-| Background | `#fbfbfa` | 页面主背景，接近纸面白 |
+| Background | `#F7F7F7` | 全站页面主背景，浅灰纸面感 |
 | Surface | `#ffffff` | 极少量内容面，不作为主要卡片背景 |
 | Text | `#111111` | 主标题、重要文本 |
 | Muted Text | `#66665f` | 正文、说明、caption |
@@ -64,11 +64,12 @@
 
 ### Usage Rules
 
-- 页面基调使用浅色，不要在一个项目页内频繁切换深浅主题。
-- 黑色文字和米白背景是主关系，颜色不应太多。
+- 页面基调统一使用 `#F7F7F7`，后续新增项目页默认继承这个背景，不要回到纯白或旧的米白。
+- 滚动导航、anchor nav、悬浮层等透明背景应基于 `rgba(247, 247, 247, ...)`，避免和页面底色脱节。
+- 黑色文字和浅灰背景是主关系，颜色不应太多。
 - `#8f5c24` 只作为 Bee Cue 或生态项目的点状强调，不要扩展成大面积棕色主题。
 - 媒体占位使用暖灰米色，不要使用纯灰或随机渐变。
-- 分隔线是主要结构元素，优先级高于阴影和卡片背景。
+- 分隔线不再作为每个模块的默认结构元素。优先用宽度、留白、对齐和图像比例建立层级；线条只保留在 Project Overview、metadata、复杂 row 或确实需要划分阅读关系的位置。
 
 ## 4. Typography
 
@@ -93,8 +94,10 @@ font-family: "Manrope", sans-serif;
 | Homepage hidden H1 | Visually hidden | 首页主视觉依靠 curtain，不直接显示大标题 |
 | Project hero H1 | `clamp(4.2rem, 9vw, 9.8rem)` | 极大、uppercase、紧凑 |
 | Project hero subtitle | `clamp(1.45rem, 2.25vw, 2.65rem)` | 作为项目说明的强标题 |
-| Section heading | `clamp(2rem, 4vw, 4.8rem)` 附近 | 应大而短，不写长段 |
+| Section heading | `clamp(2rem, 4vw, 4.8rem)` 附近 | 用于大叙事 section，应大而短，不写长段 |
+| Project section H2 | `40px` | Bee Cue、Pets 这类 case study 的二级标题基准 |
 | Feature heading | `clamp(1.8rem, 3.6vw, 4.4rem)` | 可用于横向 feature row |
+| Intro body | `15px` 到 `18px` | case study intro 段落，避免抢过 40px 标题 |
 | Body | `1rem` 到 `1.2rem` | 行高约 `1.62` 到 `1.7` |
 | Micro label | `0.7rem` 到 `0.9rem` | 用于 timeline、eyebrow、编号 |
 | Nav | `0.86rem` | 带 underline，低调 |
@@ -106,6 +109,7 @@ font-family: "Manrope", sans-serif;
 - 不使用过度装饰性的 italic。
 - 正文每段尽量短，作品集页应以短文案和图像推进。
 - `letter-spacing` 只在大标题中允许明显负值，小文本保持 `0`。
+- 项目页中除 hero 外，第二层大标题优先统一为 `40px`，用于保持 Bee Cue、Pets 和后续 case study 的横向一致。
 
 ## 5. Layout System
 
@@ -121,8 +125,23 @@ width: min(var(--max-width), calc(100% - 44px));
 项目详情页主容器：
 
 ```css
-width: min(1480px, calc(100% - 160px));
+width: min(1120px, calc(100% - 520px));
 ```
+
+项目详情页在大屏上应明显收窄，两侧留白要成为页面节奏的一部分。当前基准：
+
+- Desktop：`min(1120px, calc(100% - 520px))`
+- Medium desktop：`min(100% - 240px, 960px)`
+- Tablet：`min(100% - 32px, 760px)`
+- Small mobile：`min(100% - 24px, 390px)`
+
+Hero 和 case study anchor nav 是例外，它们需要让项目主视觉完整展开：
+
+```css
+width: min(1480px, calc(100% - 96px));
+```
+
+也就是说，正文内容收窄，hero 与锚点导航保持宽。不要把正文 shell 的窄宽度直接套到 hero、横幅图或 case study navigation 上。
 
 ### Grid Logic
 
@@ -134,6 +153,8 @@ width: min(1480px, calc(100% - 160px));
 - 项目页 hero：左侧文字，右侧主视觉，比例约 `0.42fr / 0.58fr`。
 - 项目页 section：左侧 section label，右侧正文或媒体。
 - Bee Cue row：开放式行布局，使用细线和列宽组织信息。
+- Outcome / feature grid：优先保持四宫格或两列图文卡片关系，图片和文字属于同一个 article，不要拆成纵向长流。
+- Iteration / finding 模块：图片与 finding list 使用两列结构，gap 控制在 `clamp(24px, 3vw, 40px)` 附近，必要时让图片和关键 finding 垂直居中对齐。
 
 ### Spacing
 
@@ -147,7 +168,7 @@ width: min(1480px, calc(100% - 160px));
 ### Layout Rules
 
 - 优先使用开放式 section，不要每个模块包成卡片。
-- 用细线、列宽、留白建立层级。
+- 用列宽、留白、对齐和图像比例建立层级，细线只作为辅助。
 - 图片、视频、录屏是内容核心，应占据足够面积。
 - 项目页不要做很重的装饰背景。
 - 移动端一律折叠为单列，保留阅读顺序。
@@ -185,12 +206,13 @@ Bee Cue 当前导航：
 
 ### Anchor Navigation
 
-Bee Cue 使用 sticky anchor nav：
+项目页可以使用 sticky anchor nav：
 
 - 小型 pill 链接。
-- 背景为浅色半透明。
+- 背景为 `#F7F7F7` 派生的浅色半透明。
 - 使用 `backdrop-filter: blur(14px)`。
 - 用于长项目页快速跳转。
+- 宽度应接近 hero 宽度，当前基准为 `min(1480px, calc(100% - 96px))`，不要套用正文窄 shell 造成两侧过大留白。
 
 注意：anchor nav 是项目页辅助导航，不应变成主视觉重点。
 
@@ -250,8 +272,39 @@ Bee Cue 使用 sticky anchor nav：
 
 - 卡片感要弱。
 - 背景透明或极淡。
-- 使用 border-top 和 border-bottom 建立结构。
+- Project Overview 可以保留细线和 metadata 分隔；其他 section 默认不画灰色边框线，除非内容关系必须靠线条表达。
 - 不要做成模板化 case study。
+- Hero、横幅图、系统图和界面截图要完整呈现。当素材本身是版面、图表、空间图或界面时，优先使用 `object-fit: contain`，不要裁掉项目内容。
+- 普通正文 shell 收窄，hero、anchor navigation 和需要完整展示的横向媒体可以使用更宽的 shell。
+
+### Reusable Case Study Modules
+
+后续新增项目页时，优先复用以下模块格式。
+
+#### Project Overview
+
+- 可以使用细线、metadata grid 和紧凑信息行。
+- 这是项目页里最适合保留边框线的区域。
+- 线条颜色保持轻，不要变成卡片边框。
+
+#### Outcome / Feature Grid
+
+- 保持两列四宫格结构：每个 `article` 内部包含 media 和 copy。
+- 图片区域使用稳定比例，例如 `16 / 9`，避免图片加载后造成布局跳动。
+- 图片应在自己的 figure 中完整显示，优先 `object-fit: contain`。
+- 不要把四宫格改成纵向长列表，除非移动端断点需要。
+
+#### Challenge / Research Split
+
+- 图像与文字可以使用左右分栏，图像应有足够面积。
+- 当左侧是复杂分析图、右侧是 findings list 时，图片与 list 的主内容需要视觉居中，而不是只和第一条文字顶齐。
+- 左右间距不要过大，当前建议 gap 为 `clamp(24px, 3vw, 40px)`。
+
+#### Iteration Module
+
+- 使用图片 + finding list 的两列结构。
+- 图片不要为了“放大”而脱离原本 figure 尺寸；先检查 figure、grid column 和 gap 是否导致视觉缩小。
+- 如果需要和某一条 finding 对齐，优先用 grid alignment 控制整体位置，不要用随意的 margin 微调。
 
 ### Bee Cue Project Page
 
@@ -317,12 +370,12 @@ font-weight: 700;
 
 ### Rows
 
-开放式 row 是当前作品集最重要的结构语言。
+开放式 row 是作品集里可复用的结构语言之一，但不应被滥用到所有模块。
 
 特征：
 
-- `border-top` 开始。
-- 每行 `border-bottom`。
+- Project Overview、metadata、logic flow 等信息密集区域可以用 `border-top` / `border-bottom`。
+- 图片主导、gallery、outcome grid、iteration list 等区域默认不加灰色边框线。
 - 左侧小标签或编号。
 - 中间标题。
 - 右侧说明。
@@ -341,6 +394,8 @@ font-weight: 700;
 
 - 需要强视觉展示的最终界面图。
 - 大量图片 gallery。
+- 四宫格 outcome cards。
+- 以图像完整呈现为主的 project section。
 
 ### Media
 
@@ -352,6 +407,9 @@ font-weight: 700;
 - 图片容器不加大圆角。
 - 图片 hover 可轻微 scale 到 `1.01` 到 `1.02`。
 - 媒体底色使用 `#e8e4db`。
+- Hero、系统图、流程图、空间图和界面截图优先完整呈现，使用 `object-fit: contain`；只有氛围图或明确可裁切的照片才使用 `cover`。
+- figure 的尺寸要服务图片本身的比例，不要让 figure 比图片内容大很多，造成图片看起来被缩小。
+- 需要并排比较的 media 应使用稳定 aspect-ratio，让标题和正文能够对齐。
 - alt 文案需要描述内容，而不是只写文件名。
 
 ## 10. Motion
@@ -411,13 +469,14 @@ font-weight: 700;
 
 把网页放进 Figma 时，优先保留以下视觉关系：
 
-1. 页面背景、字体和主容器宽度。
+1. 页面背景 `#F7F7F7`、字体和主容器宽度。
 2. 首页 nav 的两列结构和 underline 链接。
 3. Project page 的左 label + 右内容结构。
 4. Bee Cue 的开放式 row，而不是卡片。
 5. 真实图片、视频 poster、录屏占位的位置与比例。
 6. 大标题的字重、字距和行高。
-7. 细线分隔的节奏。
+7. 正文 shell 收窄、hero / anchor nav 保持宽的页面节奏。
+8. 线条只保留在 Overview 和必要信息行，不要给所有 section 补边框。
 
 Figma 中可以整理图层，但不要把开放式 row 改成一堆独立卡片。
 
@@ -449,10 +508,14 @@ Figma 中可以整理图层，但不要把开放式 row 改成一堆独立卡片
 新增或修改页面前检查：
 
 - 是否仍然使用 `Manrope`？
-- 是否保持浅色纸面背景？
-- 是否使用细线和留白建立结构，而不是大量卡片？
+- 是否保持全站 `#F7F7F7` 浅灰背景？
+- 是否使用正文窄 shell，并让 hero / anchor nav 保持宽？
+- 是否主要使用留白、列宽、对齐和图像比例建立结构，而不是大量卡片或大量灰线？
+- 除 Project Overview 外，是否避免了不必要的灰色边框线？
 - 导航是否和首页一致？
 - 项目页首屏是否有明确主视觉？
+- hero 或关键媒体是否完整呈现，没有裁掉重要图像内容？
+- case study 的 outcome / feature 是否保持可读的四宫格或两列结构？
 - 文案是否短而清晰？
 - 图片、视频、录屏是否有明确位置和 alt 文案？
 - 动效是否轻量？
@@ -461,5 +524,6 @@ Figma 中可以整理图层，但不要把开放式 row 改成一堆独立卡片
 
 ## 16. Design Principle Summary
 
-这个网站的视觉核心不是“漂亮的模板”，而是“克制地把复杂项目整理清楚”。  
-首页通过 curtain hero 建立个人记忆点，works timeline 建立项目秩序。项目页通过大图、短文案、细线 row 和开放式布局展示研究、系统和交互能力。任何新增页面都应延续这套语言：少装饰、重节奏、重图像、重结构。
+这个网站的视觉核心不是“漂亮的模板”，而是“克制地把复杂项目整理清楚”。
+
+首页通过 curtain hero 建立个人记忆点，works timeline 建立项目秩序。项目页通过完整大图、短文案、收窄正文、宽 hero、少量必要线条和开放式布局展示研究、系统和交互能力。任何新增页面都应延续这套语言：少装饰、重节奏、重图像、重结构。
