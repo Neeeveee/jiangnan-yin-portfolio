@@ -156,7 +156,7 @@ a {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  width: min(890px, 92vw);
+  width: min(1040px, 94vw);
   height: min(58vh, 500px);
   margin-top: 28px;
   padding-top: 0;
@@ -166,7 +166,7 @@ a {
 .curtain-item {
   --angle: 0deg;
   position: relative;
-  width: clamp(7px, 1.32vw, 19px);
+  width: clamp(9px, 1.58vw, 24px);
   height: var(--drop);
   transform: rotate(var(--angle));
   transform-origin: 50% 0;
@@ -174,7 +174,7 @@ a {
 }
 
 .curtain-gap {
-  flex: 0 0 clamp(5px, 0.9vw, 13px);
+  flex: 0 0 clamp(10px, 1.6vw, 24px);
 }
 
 .curtain-thread {
