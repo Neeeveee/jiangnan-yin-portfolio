@@ -82,9 +82,9 @@ a {
 .floating-nav {
   justify-self: end;
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(3, auto);
   align-items: center;
-  width: min(430px, 42vw);
+  width: auto;
   gap: clamp(18px, 3vw, 38px);
   background: transparent;
 }
@@ -596,6 +596,7 @@ a {
   display: grid;
   grid-template-columns: 0.48fr 0.52fr;
   gap: 28px;
+  width: min(calc(100vw - clamp(160px, 18vw, 280px)), 1080px);
   padding: 120px 0 120px;
 }
 
