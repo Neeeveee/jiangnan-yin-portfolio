@@ -1,3 +1,91 @@
+const i18n = window.PORTFOLIO_I18N;
+
+if (i18n) {
+  const storageKey = "portfolio-language";
+  const originalText = new WeakMap();
+  const originalAttributes = new WeakMap();
+  const translatableAttributes = ["aria-label", "alt", "title", "content"];
+  const languageHost = document.querySelector("[data-site-nav]") || document.querySelector(".detail-floating-nav");
+  const languageButton = document.createElement("button");
+
+  languageButton.className = "language-toggle";
+  languageButton.type = "button";
+  languageButton.setAttribute("aria-live", "polite");
+
+  const textNodes = [];
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      const parent = node.parentElement;
+      if (!parent || parent.closest("script, style, .language-toggle")) return NodeFilter.FILTER_REJECT;
+      return node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+    },
+  });
+
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    originalText.set(node, node.nodeValue);
+    textNodes.push(node);
+  }
+
+  const attributeNodes = Array.from(document.querySelectorAll(translatableAttributes.map((name) => `[${name}]`).join(",")));
+  attributeNodes.forEach((element) => {
+    const values = {};
+    translatableAttributes.forEach((name) => {
+      if (element.hasAttribute(name)) values[name] = element.getAttribute(name);
+    });
+    originalAttributes.set(element, values);
+  });
+
+  const translateTextNode = (node, language) => {
+    const source = originalText.get(node);
+    const leading = source.match(/^\s*/)[0];
+    const trailing = source.match(/\s*$/)[0];
+    const content = source.trim().replace(/\s+/g, " ");
+    node.nodeValue = `${leading}${i18n.translate(content, language)}${trailing}`;
+  };
+
+  const applyLanguage = (language) => {
+    const nextLanguage = i18n.normalizeLanguage(language);
+    document.documentElement.lang = nextLanguage === "zh" ? "zh-CN" : "en";
+    document.body.dataset.language = nextLanguage;
+
+    textNodes.forEach((node) => translateTextNode(node, nextLanguage));
+    attributeNodes.forEach((element) => {
+      const values = originalAttributes.get(element);
+      Object.entries(values).forEach(([name, value]) => {
+        element.setAttribute(name, i18n.translate(value, nextLanguage));
+      });
+    });
+
+    languageButton.textContent = nextLanguage === "zh" ? "EN" : "中";
+    languageButton.setAttribute(
+      "aria-label",
+      nextLanguage === "zh" ? "Switch to English" : "切换至中文"
+    );
+    languageButton.setAttribute("aria-pressed", String(nextLanguage === "zh"));
+    try {
+      localStorage.setItem(storageKey, nextLanguage);
+    } catch (_) {
+      // The language still works when storage is unavailable.
+    }
+  };
+
+  if (languageHost) {
+    languageHost.appendChild(languageButton);
+    languageButton.addEventListener("click", () => {
+      applyLanguage(document.body.dataset.language === "zh" ? "en" : "zh");
+    });
+  }
+
+  let savedLanguage = "en";
+  try {
+    savedLanguage = localStorage.getItem(storageKey) || "en";
+  } catch (_) {
+    savedLanguage = "en";
+  }
+  applyLanguage(savedLanguage);
+}
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
