@@ -11,6 +11,9 @@ const beeCueObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15 });
 beeCueVideos.forEach((video) => {
+  const playbackRate = Number(video.dataset.playbackRate || 1.5);
+  video.defaultPlaybackRate = playbackRate;
+  video.playbackRate = playbackRate;
   video.muted = true;
   video.autoplay = !beeCueMotion.matches;
   beeCueObserver.observe(video);
