@@ -103,7 +103,7 @@ document.querySelectorAll(".reveal").forEach((element) => {
 });
 
 const progressBar = document.querySelector(".progress-bar");
-const siteNav = document.querySelector("[data-site-nav]");
+const siteNav = document.querySelector("[data-site-nav], .detail-floating-nav");
 
 if (progressBar) {
   const updateProgress = () => {
@@ -119,10 +119,46 @@ if (progressBar) {
 }
 
 if (siteNav) {
+  const caseNav = document.querySelector('.bee-cue-anchor-nav, .pets-anchor-nav, .coralline-anchor-nav, .earmura-anchor-nav');
+  let lastScroll = Math.max(0, window.scrollY);
+  let direction = 0;
+  let distance = 0;
+  const setNavHidden = (hidden) => {
+    siteNav.classList.toggle("is-scroll-hidden", hidden);
+    document.body.classList.toggle("site-nav-hidden", hidden);
+  };
+  const measureNav = () => {
+    document.body.style.setProperty("--site-nav-height", `${siteNav.offsetHeight}px`);
+    if (caseNav) document.body.style.setProperty("--case-nav-height", `${caseNav.offsetHeight}px`);
+  };
   const updateSiteNav = () => {
-    siteNav.classList.toggle("is-scrolled", window.scrollY > 18);
+    // Clamp overscroll so touch-device bounce cannot reverse the direction.
+    const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    const scroll = Math.min(maxScroll, Math.max(0, window.scrollY));
+    const delta = scroll - lastScroll;
+    const nextDirection = Math.sign(delta);
+    siteNav.classList.toggle("is-scrolled", scroll > 18);
+    if (nextDirection && nextDirection !== direction) distance = 0;
+    distance += Math.abs(delta);
+    if (nextDirection) direction = nextDirection;
+    if (scroll <= siteNav.offsetHeight || (siteNav.contains(document.activeElement) || caseNav?.contains(document.activeElement))) {
+      setNavHidden(false);
+      distance = 0;
+    } else if (distance >= 10) {
+      setNavHidden(direction > 0);
+      distance = 0;
+    }
+    lastScroll = scroll;
   };
 
+  measureNav();
+  const navResizeObserver = new ResizeObserver(measureNav);
+  navResizeObserver.observe(siteNav);
+  if (caseNav) {
+    navResizeObserver.observe(caseNav);
+    caseNav.addEventListener("focusin", () => setNavHidden(false));
+  }
+  siteNav.addEventListener("focusin", () => setNavHidden(false));
   updateSiteNav();
   window.addEventListener("scroll", updateSiteNav, { passive: true });
 }

@@ -10,7 +10,7 @@ test("every page loads the translation layer before the shared script", () => {
   for (const page of pages) {
     const html = fs.readFileSync(path.join(root, page), "utf8");
     const translationsIndex = html.indexOf('src="translations.js"');
-    const sharedScriptIndex = html.indexOf('src="script.js"');
+    const sharedScriptIndex = html.search(/src="script\.js(?:\?[^"]*)?"/);
 
     assert.notEqual(translationsIndex, -1, `${page} is missing translations.js`);
     assert.ok(translationsIndex < sharedScriptIndex, `${page} loads translations too late`);

@@ -16,3 +16,6 @@ project-240520.pdf
 *.baiduyun.uploading.cfg
 Thumbs.db
 .DS_Store
+
+# Keep original video recordings local; publish optimized web videos.
+/video/*.mov
