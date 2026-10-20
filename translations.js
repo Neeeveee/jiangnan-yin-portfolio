@@ -83,7 +83,7 @@
     "Interactive Storytelling": "交互叙事",
     "Ready to work together? Let's talk about internships, collaborations, and design opportunities.": "期待一起合作？欢迎与我聊聊实习、协作与设计机会。",
     "Portfolio 2026": "作品集 2026",
-    "Hangzhou / Remote": "杭州 / 远程",
+    "Seattle": "西雅图",
 
     "Interactive Narrative / Web Prototype / System Design": "交互叙事 / 网页原型 / 系统设计",
     "A working web prototype that turns voice input, narrative roles and decision logic into an interactive response-system experience.": "一个可运行的网页原型，将语音输入、叙事角色与决策逻辑转化为交互式响应系统体验。",
