@@ -7023,3 +7023,106 @@ body .earmura-anchor-nav {
   body.bee-cue-page .bee-cue-anchor-nav, body .pets-anchor-nav,
   body .coralline-anchor-nav, body .earmura-anchor-nav { transition: none; }
 }
+
+/* Related work: open image-led links shared by every case study. */
+section.related-work::before { display: none; }
+section.related-work header,
+section.related-work .detail-see-also-header {
+  display: block;
+  border: 0;
+  padding: 0 0 28px;
+}
+section.related-work header span,
+section.related-work .detail-see-also-header span {
+  padding: 0;
+  color: #55554f;
+  font-size: 14px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+section.related-work [class$="see-also-list"] {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(24px, 4vw, 56px);
+  margin: 0;
+}
+section.related-work [class$="see-also-list"] > a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 32px;
+  align-content: start;
+  align-items: start;
+  gap: 20px 16px;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #111;
+  text-decoration: none;
+  transform: none;
+  transition: none;
+}
+section.related-work [class$="see-also-list"] > a:hover {
+  background: transparent;
+  transform: none;
+}
+section.related-work [class$="see-also-list"] > a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 8px;
+}
+section.related-work [class$="see-also-list"] img {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+  transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+section.related-work [class$="see-also-list"] > a > div:not(.detail-see-also-arrow) { min-width: 0; }
+section.related-work [class$="see-also-list"] span {
+  display: block;
+  margin: 0 0 8px;
+  color: #55554f;
+  font-size: 13px;
+  line-height: 1.5;
+}
+section.related-work [class$="see-also-list"] strong {
+  display: block;
+  color: #111;
+  font-size: clamp(22px, 2.3vw, 32px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+section.related-work [class$="see-also-list"] b,
+section.related-work .detail-see-also-arrow {
+  align-self: end;
+  color: #111;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+  transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (hover: hover) {
+  section.related-work [class$="see-also-list"] > a:hover img { transform: translateY(-4px); }
+  section.related-work [class$="see-also-list"] > a:hover b,
+  section.related-work a:hover .detail-see-also-arrow { transform: translateX(6px); }
+}
+@media (max-width: 640px) {
+  section.related-work [class$="see-also-list"] { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  section.related-work [class$="see-also-list"] > a { gap: 16px; }
+  section.related-work [class$="see-also-list"] strong { font-size: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  section.related-work [class$="see-also-list"] img,
+  section.related-work [class$="see-also-list"] b,
+  section.related-work .detail-see-also-arrow { transition: none; }
+  section.related-work [class$="see-also-list"] > a:hover img,
+  section.related-work [class$="see-also-list"] > a:hover b,
+  section.related-work a:hover .detail-see-also-arrow { transform: none; }
+}
